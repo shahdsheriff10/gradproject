@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ask a Doctor</title>
+  <link rel="stylesheet" href="patientview.css">
+</head>
+<body>
+  <div class="header">
+    <button class="back-btn" onclick="goBack()">←</button>
+
+    <h2>Ask a Doctor</h2>
+    <div class="profile-icon">👤</div>
+  </div>
+
+  <div class="card">
+    <div class="doctor-info">
+      <div>
+        <strong>Dr. Sara Kamal</strong><br>
+        <span>Neurologist</span>
+      </div>
+      <div class="icon">👨‍⚕️</div>
+    </div>
+  </div>
+
+  <div class="form-section">
+    <label for="message">Your Message</label>
+    <textarea id="message" placeholder="Type your question or symptoms here..."></textarea>
+
+    
+    <label class="file-upload">
+  📎 Attach Image or Report
+  <input type="file" id="file" hidden>
+</label>
+
+<p id="fileName"></p>
+
+<button id="removeFileBtn" style="display: none;">❌ Remove File</button>
+
+
+    <button onclick="sendQuestion()">Send Question</button>
+  </div>
+
+  <script>
+  function goBack() {
+    window.location.href = "dashboard.html"; // or use: history.back();
+  }
+</script>
+<script>
+  const fileInput = document.getElementById('file');
+  const fileNameDisplay = document.getElementById('fileName');
+  const removeBtn = document.getElementById('removeFileBtn');
+
+  fileInput.addEventListener('change', function () {
+    const file = fileInput.files[0];
+    if (file) {
+      fileNameDisplay.textContent = `Attached: ${file.name}`;
+      removeBtn.style.display = 'inline-block';
+    }
+  });
+
+  removeBtn.addEventListener('click', function () {
+    fileInput.value = ''; // Clear the input
+    fileNameDisplay.textContent = '';
+    removeBtn.style.display = 'none';
+  });
+</script>
+
+
+
+  <script src="patientview.js"></script>
+</body>
+</html>

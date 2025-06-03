@@ -1,0 +1,106 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background: #5f32ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.payment-container {
+  width: 100%;
+  max-width: 420px;
+  padding: 20px;
+  background: #5f32ff;
+  color: white;
+}
+
+.back-arrow {
+  font-size: 24px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.doctor-card {
+  background: white;
+  color: black;
+  border-radius: 14px;
+  padding: 12px;
+  margin-bottom: 20px;
+}
+
+.message-preview {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.fee-card {
+  background: white;
+  color: black;
+  border-radius: 14px;
+  padding: 14px;
+  margin-bottom: 20px;
+}
+
+.fee {
+  font-weight: bold;
+  font-size: 18px;
+  color: green;
+  margin: 6px 0 12px 0;
+}
+
+.payment-methods {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.payment-methods button {
+  flex: 1 1 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  background: #ddd;
+  color: black;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.payment-methods button.selected {
+  background: green;
+  color: white;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: #ffcc00;
+  color: black;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.success-msg {
+  margin-top: 15px;
+  text-align: center;
+  color: #ffb347;
+  font-weight: bold;
+  display: none;
+}

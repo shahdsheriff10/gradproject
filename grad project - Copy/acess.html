@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="acess.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Access Requests</title>
+</head>
+<body>
+
+  <h2>Access Requests</h2>
+
+  <!-- ✅ Card 1 -->
+  <div class="request-card">
+    <p><strong>Dr. Sara Kamal</strong></p>
+    <p>Neurologist</p>
+    <p><strong>Reason:</strong> Emergency case</p>
+    <button class="approve-btn" onclick="goToRecordHistory()">Approve</button>
+    <button class="reject-btn" onclick="rejectRequest(this)">Reject</button>
+  </div>
+
+  <!-- ✅ Card 2 -->
+  <div class="request-card">
+    <p><strong>Dr. Youssef Nabil</strong></p>
+    <p>Cardiologist</p>
+    <p><strong>Reason:</strong> Chest pain</p>
+    <button class="approve-btn" onclick="goToRecordHistory()">Approve</button>
+    <button class="reject-btn" onclick="rejectRequest(this)">Reject</button>
+  </div>
+
+  <!-- ✅ Card 3 -->
+  <div class="request-card">
+    <p><strong>Dr. Mona Hassan</strong></p>
+    <p>Orthopedist</p>
+    <p><strong>Reason:</strong> Follow-up required</p>
+    <button class="approve-btn" onclick="goToRecordHistory()">Approve</button>
+    <button class="reject-btn" onclick="rejectRequest(this)">Reject</button>
+  </div>
+
+  <!-- ✅ Script to be added later -->
+   <script>
+  function goToRecordHistory() {
+    window.location.href = "recordhistory.html"; // Make sure this file exists
+  }
+
+  function rejectRequest(button) {
+    const card = button.closest(".request-card");
+    if (card) {
+      card.remove();
+    }
+  }
+</script>
+<script src="acess.js"> </script>
+
+</body>
+</html>
+

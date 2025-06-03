@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ask a Doctor - Payment</title>
+  <link rel="stylesheet" href="payment.css" />
+</head>
+<body>
+  <div class="payment-container">
+    <div class="back-arrow">&#8592;</div>
+    <h2>Ask a Doctor - Payment</h2>
+
+    <div class="doctor-card">
+      <p><strong>Dr. Sara Kamal</strong></p>
+      <p>Neurologist</p>
+      <p>Cairo Medical Center</p>
+      <p class="message-preview">Your message: I’ve had chest pain for 2 days...</p>
+    </div>
+
+    <div class="fee-card">
+      <p><strong>Consultation Fee</strong></p>
+      <p class="fee">EGP 75.00</p>
+
+      <p><strong>Payment Method</strong></p>
+      <div class="payment-methods">
+        <button class="selected" onclick="selectMethod(this)">instapay</button>
+        <button onclick="selectMethod(this)">Credit/Debit Card</button>
+        <button onclick="selectMethod(this)">Mobile Wallet</button>
+      </div>
+    </div>
+
+    <button class="submit-btn" onclick="submitPayment()">Confirm & Submit Question</button>
+    <p id="successMsg" class="success-msg">Payment successful! Message sent to Dr. Sara Kamal.</p>
+  </div>
+
+  <script src="payment.js"></script>
+</body>
+</html>

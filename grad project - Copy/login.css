@@ -1,0 +1,120 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: white;
+  color: black;
+}
+
+.container {
+  max-width: 390px;
+  margin: auto;
+}
+
+.top-section {
+  position: relative;
+  background-color: #6C47FF;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.top-image {
+  width: 100%;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: yellow;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form-section {
+  padding: 30px 20px;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background-color: #eee;
+  margin-top: 5px;
+}
+
+.password-field {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.forgot {
+  text-align: right;
+  font-size: 12px;
+  color: gray;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.login-btn {
+  background-color: #FFC727;
+  border: none;
+  width: 100%;
+  padding: 15px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 25px;
+  cursor: pointer;
+}
+
+.or-section {
+  text-align: center;
+  margin: 20
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* ← Increase this value to create more space */
+  margin-bottom: 25px;
+}
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}

@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="welcome.css">
+  <link rel="shortcut icon" href="logoooo.png" type="image/x-icon" />
+  <title>Medical ID</title>
+</head>
+<body>
+  <div class="container">
+    <div class="header">Let's get started!</div>
+
+    <div class="illustration">
+      <img src="gardd55.jpg" alt="Medical Illustration" />
+    </div>
+
+<div class="user-type">
+  <label>
+    <input type="radio" name="userRole" value="patient" checked>
+    I am a Patient
+  </label>
+  <label>
+    <input type="radio" name="userRole" value="doctor">
+    I am a Doctor
+  </label>
+</div>
+
+    <button class="signup-button" onclick="goToSignUp()">Sign Up</button>
+
+    <div class="login-text">
+      Already have an account? <span onclick="loginRedirect()">Log In</span>
+    </div>
+  </div>
+  
+
+  <script src="welcome.js"></script>
+</body>
+</html>

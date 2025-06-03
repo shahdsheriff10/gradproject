@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="shortcut icon" href="logoooo.png" type="image/x-icon" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Medical ID</title>
+  <link rel="stylesheet" href="recordhistory.css">
+</head>
+<body>
+  <div class="header">
+    <button class="back-btn">←</button>
+    <h1>Medical History</h1>
+
+    <!-- ✅ Clickable Profile Icon in header -->
+    <a href="profile.html" class="profile-icon">
+      <img src="useruser.jpg" alt="Profile" />
+    </a>
+  </div>
+
+  <div class="tabs">
+    <button class="tab active">All</button>
+    <button class="tab">Medications</button>
+    <button class="tab">Visits</button>
+    <button class="tab">Surgery</button>
+    <button class="tab">Lab Tests</button>
+  </div>
+
+  <div class="history-list">
+    <div class="card">
+      <p class="date">Monday, 16 May</p>
+      <h3>DR. AHMED</h3>
+      <p class="desc">Flu Diagnosis</p>
+      <div class="icon">🩺</div>
+    </div>
+
+    <div class="card">
+      <p class="date">Wednesday, 2 March</p>
+      <h3>DR. SAYED</h3>
+      <p class="desc">Antibiotic Treatment</p>
+      <div class="icon">💊</div>
+    </div>
+
+    <div class="card">
+      <p class="date">Saturday, 8 February</p>
+      <h3>DR. EMAD</h3>
+      <p class="desc">Routine Check-up</p>
+      <div class="icon">📅</div>
+    </div>
+
+    <div class="card empty">
+      <div class="icon">📁</div>
+      <h3>no records yet</h3>
+      <p class="desc">your medical history will appear here after visits.</p>
+    </div>
+  </div>
+  <div id="filePreview"></div>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+  const fileName = localStorage.getItem('attachedFileName');
+  if (fileName) {
+    const fileContainer = document.getElementById('filePreview');
+    fileContainer.innerHTML = `<p>Attached File: <strong>${fileName}</strong></p>`;
+  }
+});
+
+  </script>
+
+  <script src="recordhistory.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medical ID - Sign Up</title>
+  <link rel="stylesheet" href="signup.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="top-section">
+      <img src="gardd55.jpg" alt="Signup Illustration" class="top-image" />
+      <button class="back-button">←</button>
+    </div>
+
+    <h2 id="form-title">Sign Up</h2>
+
+    <div class="form-section">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" placeholder="Taras Shevchenko" />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" placeholder="sheva88228@mail.com" />
+
+      <label for="password">Password</label>
+      <div class="password-field">
+        <input type="password" id="password" placeholder="••••••••" />
+        <span class="toggle-password">👁️</span>
+      </div>
+
+      <!-- Specialization field will be injected here if doctor -->
+<button class="signup-btn" onclick="goToDashboard()">Sign Up</button>
+
+
+
+      <div class="or-section">OR</div>
+
+      <div class="social-icons">
+        <img src="google.jpg" alt="Google" />
+        <img src="apple.jpg" alt="Apple" />
+        <img src="facebook.jpg" alt="Facebook" />
+      </div>
+
+      <div class="login-link">
+        Already have an account? <span onclick="goToLogin()">Log In</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="signup.js"></script>
+</body>
+</html>
+
+
+

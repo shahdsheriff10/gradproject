@@ -1,0 +1,66 @@
+,
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Appointment</title>
+  <link rel="stylesheet" href="booking.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="back">&#8592;</div>
+    <h2>Book Appointment</h2>
+
+    <div class="doctor-info">
+      <p><strong>Dr. Sara Kamal</strong></p>
+      <p>Cardiologist</p>
+      <p>Misr International Hospital</p>
+    </div>
+
+    <div class="section">
+      <label>Appointment type</label>
+      <div class="type-buttons">
+        <button class="selected" onclick="selectType(this)">Online</button>
+        <button onclick="selectType(this)">In-person</button>
+      </div>
+    </div>
+
+    <div class="section">
+      <label for="date">Select Date</label>
+      <div class="date-box">
+        <input type="date" id="date">
+      </div>
+    </div>
+
+    <div class="section">
+      <label>Select Time Slot</label>
+      <div class="time-buttons">
+        <button onclick="selectTime(this)">10:00 AM</button>
+        <button onclick="selectTime(this)">12:30 PM</button>
+        <button onclick="selectTime(this)">03:30 PM</button>
+        <button onclick="selectTime(this)">06:30 PM</button>
+      </div>
+    </div>
+
+    <div class="section">
+      <label>Additional Notes</label>
+      <textarea placeholder="I'm experiencing chest pain lately..."></textarea>
+    </div>
+
+   
+    <button onclick="goToPayment()">Confirm Appointment</button>
+
+
+    <p class="success-msg" id="success">Appointment booked successfully!</p>
+  </div>
+  <script>
+  function goToPayment() {
+    window.location.href = "payment.html";
+  }
+</script>
+
+
+  <script src="booking.js"></script>
+</body>
+</html>
